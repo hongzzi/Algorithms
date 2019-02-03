@@ -1,5 +1,11 @@
 package DP;
 
+
+/*
+*
+* 런타임 오류 해결하느라 시간체크함수 추가함
+*
+*/
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.InputStreamReader;
