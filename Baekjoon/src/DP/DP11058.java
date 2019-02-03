@@ -9,28 +9,19 @@ public class DP11058 {
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
         int n = Integer.parseInt(br.readLine());
-        int[] dp = new int[n+1];
-        int bf=0; //c 했을 경우의 버퍼
+        long[] dp = new long[n+1];
         dp[0]=0;
+        for (int i=1; i<=n; i++) {
+            dp[i] = i;
+            dp[i] = Math.max(dp[i], dp[i-1]+1);
 
-        for (int i = 1; i<n+1; i++) {
-            dp[i] = dp[i-1]+1;
-            if(bf>0) {
-                dp[i] = Math.max(dp[i],dp[i-1]+bf);
-            }
-            if(i>3) {
-                if(dp[i-3]*2>dp[i]) {
-                    bf = dp[i-3];
-                    dp[i] = dp[i - 3]+bf;
-                }
-            }
+            if(i>=5)
+                dp[i] = Math.max(dp[i], dp[i-4]*3);
+            if(i>=6)
+                dp[i] = Math.max(dp[i], dp[i-5]*4);
         }
 
-        bw.write(String.valueOf(dp[n]));
-
-        bw.flush();
-        bw.close();
-
+        System.out.println(dp[n]);
     }
 
 
