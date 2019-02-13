@@ -10,15 +10,7 @@ public class Main {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
 
-        int sugar = Integer.parseInt(br.readLine());
-        int i, answer = 0;
-
-        int[] pocket = new int[5001];
-        
-
-
-
-        bw.write(String.valueOf(answer));
+        //bw.write();
         bw.flush();
         bw.close();
 
