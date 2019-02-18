@@ -1,10 +1,14 @@
+import java.util.Scanner;
+
 public class Print10172 {
 
     public static void main(String[] args) {
-        System.out.print("|\\_/|\n" +
-                "|q p|   /}\n" +
-                "( 0 )\"\"\"\\\n" +
-                "|\"^\"`    |\n" +
-                "||_/=\\\\__|");
+        Scanner sc = new Scanner(System.in);
+
+        float a = sc.nextInt();
+        float b = sc.nextInt();
+
+        float answer = a/b;
+
     }
 }
