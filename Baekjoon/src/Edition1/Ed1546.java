@@ -1,3 +1,5 @@
+package Edition1;
+
 import java.io.*;
 import java.util.StringTokenizer;
 
